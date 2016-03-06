@@ -1,0 +1,69 @@
+
+<!doctype html>
+<head>
+  <link rel=stylesheet href="../../node_modules/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="../../node_modules/codemirror/addon/hint/show-hint.css">
+  <link rel="stylesheet" href="../../node_modules/codemirror/addon/dialog/dialog.css">
+  <link rel="stylesheet" href="../../node_modules/codemirror/addon/tern/tern.css">
+  <meta charset="utf-8">
+  <link rel=stylesheet href="style.css">
+  <title>Jive Framework AutoComplete Demo (Packages)</title>
+  <style>
+  .CodeMirror-hint {
+    max-width: 600px;
+    min-width: 200px;
+    overflow: visible;
+  }
+  </style>
+</head>
+<body>
+  <!-- load all the files required for the demo -->
+  <script src="../../node_modules/codemirror/lib/codemirror.js"></script>
+  <script src="../../node_modules/codemirror/mode/javascript/javascript.js"></script>
+  <script src="../../node_modules/codemirror/addon/hint/show-hint.js"></script>
+  <script src="../../node_modules/codemirror/addon/dialog/dialog.js"></script>
+  <script src="../../node_modules/codemirror/addon/tern/tern.js"></script>
+  <script src="polyfill.js"></script>
+  <script src="../../node_modules/codemirror/addon/search/searchcursor.js"></script>
+  <script src="../../node_modules/codemirror/addon/search/search.js"></script>
+  <script src="../../node_modules/codemirror/addon/edit/matchbrackets.js"></script>
+  <script src="../../node_modules/acorn/dist/acorn.js"></script>
+  <script src="../../node_modules/acorn/dist/acorn_loose.js"></script>
+  <script src="../../node_modules/acorn/dist/walk.js"></script>
+  <script src="../../node_modules/tern/lib/signal.js"></script>
+  <script src="../../node_modules/tern/lib/tern.js"></script>
+  <script src="../../node_modules/tern/lib/def.js"></script>
+  <script src="../../node_modules/tern/lib/comment.js"></script>
+  <script src="../../node_modules/tern/lib/infer.js"></script>
+  <script src="script.js"></script>
+  <script src="../../node_modules/tern/plugin/requirejs.js"></script>
+  <script src="../../node_modules/tern/plugin/doc_comment.js"></script>
+  <script src="../../node_modules/tern/plugin/complete_strings.js"></script>
+  <script src="../../jive.js"></script>
+<h1>Jive Framework Auto Complete Demo (Jive Package)</h1>
+<div style="position: relative" id="demospace">
+  <select id="commands">
+    <option>commands...</option>
+    <option value=complete>Autocomplete (ctrl-space)</option>
+    <option value=jumptodef>Jump to definition (alt-.)</option>
+    <option value=finddocs>Describe (ctrl-o)</option>
+    <option value=findtype>Find type of (ctrl-i)</option>
+    <option value=rename>Rename variable (ctrl-q)</option>
+    <option value=addfile>Add a new file</option>
+    <option value=delfile>Remove this file</option>
+  </select>
+  <form>
+    <ul class="tabs" id="docs"></ul>
+    <textarea id=code name=code>
+{
+  "textSubmit": {
+    "type": "Popup",
+    "properties": {
+
+    }
+  }
+}
+</textarea>
+  </form>
+</div>
+</body>

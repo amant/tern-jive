@@ -1,0 +1,24 @@
+{
+  "name": "tern-jive",
+  "license": "MIT",
+  "version": "0.1.0",
+  "main": "jive.js",
+  "scripts": {
+    "start": "http-server -a localhost -p 8000"
+  },
+  "author": "Aman Tuladhar <aman.tuladhar@gmail.com>",
+  "description": "Jive framework development assistor.",
+  "repository": {
+    "type": "git",
+    "url": "git://stash.gfk.com/scm/badp/tern-jive.git"
+  },
+  "dependencies": {
+    "tern": "^0.15.0",
+    "acorn": "^2.5.2"
+  },
+  "devDependencies": {
+    "codemirror": "^5.8.0",
+    "http-server": "^0.9.0",
+    "test": ">=0.0.5"
+  }
+}
