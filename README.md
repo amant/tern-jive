@@ -3,9 +3,6 @@ Jive framework development assistor.
 
 tern-jive is a tern plugin which assists in development of Jive framework base Dashboard(s). It currently supports autocomplete for site and package definitions. It can be plugged into different editors: Atom, Sublime, Vim, CodeMirror, Light Table, gedit, Brackets, Edge Code, CodeLite. However, it is extensively tested only with Atom and CodeMirror.
 
-[[https://github.com/amant/tern-jive/blob/master/wiki/atom-autocomplete.png|alt=autocomplete-atom-demo]]
-[[https://github.com/amant/tern-jive/blob/master/wiki/codemirror-autocomplete.png|alt=autocomplete-codemirror-demo]]
-
 ## To run demo
 
 Clone repository:
@@ -32,4 +29,12 @@ Start web server :
 $ npm start
 ```
 
-Open up browser and goto http://localhost:8000/demo
+Open up browser and goto :
+
+```
+http://localhost:8000/demo
+```
+
+## Screenshots:
+![Atom & TernJive](https://github.com/amant/tern-jive/blob/master/wiki/atom-autocomplete.png)
+![CodeMirror & TernJive](https://github.com/amant/tern-jive/blob/master/wiki/codemirror-autocomplete.png)
