@@ -62,7 +62,7 @@
 	function isNodeJs() {
 		return typeof process !== 'undefined';
 	}
-	
+
 	function isJSONFile(filename) {
 		var name = filename.split('.');
 		return (name[name.length - 1].toLowerCase() === 'json');
@@ -132,7 +132,6 @@
 
 	// Handler for plugin's autocomplete
 	function findCompletions(file, query) {
-		debugger;
 		var wordStart = tern.resolvePos(file, query.end),
 			wordEnd = wordStart,
 			startPos, endPos, word, completionSets;
@@ -148,7 +147,7 @@
 
 		// check if cursor is inside an object expression
 		var jiveExpr = findJiveExpression(file, wordEnd);
-		
+
 		if (!jiveExpr || jiveExpr === NO_JIVE_EXPRESSION) return;
 
 		// check if there are any completionSets
@@ -193,7 +192,7 @@
 	function findJiveExpression(file, wordEnd) {
 		var expr = null,
 			expressionFn = [getMemberExpr, getValueForTypeProperty, getValueForProperty, getParentNode];
-		
+
 		// compenset for the injected variable on json file when walking down ast
 		if (isJSONFile(file.name)) {
 			wordEnd += INJECT_VARIABLE_DECLARATION.length;
@@ -390,7 +389,7 @@
 	function completeModuleName(jiveExpr, word, file) {
 		var filterCompletion = {},
 			completionSets = [],
-			cx = infer.cx(), 
+			cx = infer.cx(),
 			isJSON = isJSONFile(file.name);
 
 		switch (jiveExpr.type) {
@@ -404,7 +403,7 @@
 
 				} else if (jiveExpr.key.name === PROPERTY_COMPONENTS || jiveExpr.key.value === PROPERTY_COMPONENTS) {
 					if (word === '') {
-						var name = generateComponentId(); 
+						var name = generateComponentId();
 						completionSets = [{
 							displayName: name,
 							name: getName(name)
@@ -462,7 +461,7 @@
 		function getName(name) {
 			return isJSON ? '"' + name + '": ' : name;
 		}
-		
+
 		function gatherPropertyValue() {
 			for (var k in jiveExpr.node.props) {
 				var prop = jiveExpr.node.props[k];
