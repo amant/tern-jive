@@ -1,7 +1,7 @@
 {
   "name": "tern-jive",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "jive.js",
   "scripts": {
     "start": "http-server -a localhost -p 8000"
