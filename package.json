@@ -10,7 +10,7 @@
   "description": "Jive framework development assistor.",
   "repository": {
     "type": "git",
-    "url": "git://stash.gfk.com/scm/badp/tern-jive.git"
+    "url": "https://github.com/amant/tern-jive.git"
   },
   "dependencies": {
     "tern": "^0.15.0",
